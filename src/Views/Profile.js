@@ -14,8 +14,9 @@ const Profile =  ({navigation})=>{
           onPress={()=>{
             navigation.navigate('Home')
           }}
+          style={ProfileStyle.profileBtn}
         >
-          <Text>Home</Text>
+          <Text style={ProfileStyle.profilBtnText}>Home</Text>
         </TouchableOpacity>
       </View>
 

@@ -14,8 +14,9 @@ const Home =  ({ navigation })=>{
             onPress={()=>{
                 navigation.navigate('Profile')
             }}
+            style={HomeStyle.profileBtn}
         >
-            <Text>Naviguer vers profil</Text>
+            <Text style={HomeStyle.profilBtnText}>Naviguer vers profil</Text>
         </TouchableOpacity> 
     </View>
     )

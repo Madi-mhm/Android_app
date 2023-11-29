@@ -23,4 +23,20 @@ export const ProfileStyle = (StyleSheet.createstyle = StyleSheet.create({
     marginTop:40,
     borderRadius:9,
   },
+
+  profileBtn: {
+    height:44,
+    width:"50%",
+    marginHorizontal:"25%",
+    backgroundColor:"#14213D",
+    marginVertical:30,
+    borderRadius:25,
+    
+  },
+  profilBtnText: {
+    color: "white",
+    textAlign: "center",
+    fontSize: 18,
+    paddingVertical: 9,
+  },
 }))
