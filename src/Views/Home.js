@@ -12,11 +12,11 @@ const Home =  ({ navigation })=>{
       />
         <TouchableOpacity
             onPress={()=>{
-                navigation.navigate('Profile')
+                navigation.navigate('Login')
             }}
             style={HomeStyle.profileBtn}
         >
-            <Text style={HomeStyle.profilBtnText}>Naviguer vers profil</Text>
+            <Text style={HomeStyle.profilBtnText}>Se Connecter</Text>
         </TouchableOpacity> 
     </View>
     )
