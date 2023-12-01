@@ -5,7 +5,7 @@ import { useState } from "react"
 import { checkEmail, checkPassword } from "../Utils/Regex"
 import { login } from "../Services/Login"
 
-export default Login = ()=>{
+export default Login = ({navigation})=>{
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
@@ -20,7 +20,13 @@ export default Login = ()=>{
         }else if(checkPassword(password) === false){
             setPasswordError("Incorrect password format!")
         }else{
-            login(email, password)
+            login(email, password).then((res)=>{
+                if(res === 200){
+                    navigation.navigate("Home")
+                }else(
+                    alert("Invalid credentials")
+                )
+            })
         }
 
     }
