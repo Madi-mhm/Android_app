@@ -3,6 +3,7 @@ import { LoginStyle } from "../Styles/Views/Login"
 import Logo from "../medias/mark.png"
 import { useState } from "react"
 import { checkEmail, checkPassword } from "../Utils/Regex"
+import { login } from "../Services/Login"
 
 export default Login = ()=>{
     const [email, setEmail] = useState('');
@@ -11,15 +12,19 @@ export default Login = ()=>{
     const [passwordError, setPasswordError] = useState('');
 
     function handleLogin(){
+        setEmailError('')
+        setPasswordError('')
 
         if(checkEmail(email) === false){
             setEmailError("Incorrect email format!")
-        }
-        
-        if(checkPassword(password) === false){
+        }else if(checkPassword(password) === false){
             setPasswordError("Incorrect password format!")
+        }else{
+            login(email, password)
         }
+
     }
+
 
     return(
         <View style={LoginStyle.mainContainer}>

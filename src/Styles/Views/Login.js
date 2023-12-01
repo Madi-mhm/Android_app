@@ -26,6 +26,7 @@ export const LoginStyle = (StyleSheet.createstyle = StyleSheet.create({
     borderColor:  '#e5e5e5',
     marginVertical:  10,
     borderRadius:  9,
+    paddingLeft: 10,
   },
 
   passwordLabelsContainer: {
